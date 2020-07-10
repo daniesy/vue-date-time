@@ -1,6 +1,6 @@
 {
   "name": "@daniesy/vue-date-time",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/vue-date-time.common.js",
   "files": [
     "dist/*",
@@ -12,7 +12,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "build-package": "vue-cli-service build --target lib --name vue-date-time ./src/index.js"
+    "build-bundle": "vue-cli-service build --target lib --name vue-date-time ./src/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
