@@ -182,12 +182,12 @@ export default {
     },
     selectClosestMinute() {
       const diff = this.selectedMinute % this.minuteIncrement;
-      return this.selectedMinute(this.selectedMinute + diff);
+      return this.selectMinute(this.selectedMinute + diff);
     }
   },
   created() {
     if (this.roundUp) {
-      this.selectClosestMinute()
+      this.selectClosestMinute();
     }
   }
 };
