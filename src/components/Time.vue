@@ -118,6 +118,10 @@ export default {
     timeLabel: {
       type: String,
       default: "Time"
+    },
+    roundUp: {
+      type: Boolean,
+      default: true
     }
   },
   watch: {},
@@ -175,9 +179,17 @@ export default {
     updateDate(date) {
       this.date = date;
       this.$emit("input", this.date);
+    },
+    selectClosestMinute() {
+      const diff = this.selectedMinute % this.minuteIncrement;
+      return this.selectedMinute(this.selectedMinute + diff);
     }
   },
-  created() {}
+  created() {
+    if (this.roundUp) {
+      this.selectClosestMinute()
+    }
+  }
 };
 </script>
 

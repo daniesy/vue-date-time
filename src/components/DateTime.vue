@@ -23,6 +23,7 @@
           :minute-increment="minuteIncrement"
           :min-date="minDate"
           :max-date="maxDate"
+          :round-up="roundUp"
         />
       </div>
     </div>
@@ -80,7 +81,11 @@ export default {
     nightHour: { type: Number, default: 20 },
     minuteFormat: { type: String, default: "m" },
     hourFormat: { type: String, default: "H" },
-    minuteIncrement: { type: Number, default: 5 }
+    minuteIncrement: { type: Number, default: 5 },
+    roundUp: {
+      type: Boolean,
+      default: true
+    }
   },
   watch: {
     value(n, o) {
