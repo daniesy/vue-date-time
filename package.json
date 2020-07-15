@@ -1,6 +1,6 @@
 {
   "name": "@daniesy/vue-date-time",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "dist/vue-date-time.common.js",
   "files": [
     "dist/*",
