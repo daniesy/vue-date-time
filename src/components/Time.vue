@@ -181,8 +181,11 @@ export default {
       this.$emit("input", this.date);
     },
     selectClosestMinute() {
-      const diff = this.selectedMinute % this.minuteIncrement;
-      return this.selectMinute(this.selectedMinute + diff);
+      const diff = this.selectedMinute % this.minuteIncrement,
+        date = dayjs(this.value).minute(
+          this.selectedMinute + (diff ? this.minuteIncrement - diff : diff)
+        );
+      return this.selectMinute({ value: date.format() });
     }
   },
   created() {
