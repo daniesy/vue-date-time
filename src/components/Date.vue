@@ -5,7 +5,7 @@
       <div class="date-display">
         <button @click="prevMonth">
           <svg
-            width="16"
+            width="100%"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 50"
           >
@@ -17,7 +17,7 @@
         <div>{{ selectedMonth }} {{ selectedYear }}</div>
         <button @click="nextMonth">
           <svg
-            width="16"
+            width="100%"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 50"
           >

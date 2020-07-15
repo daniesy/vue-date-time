@@ -153,8 +153,9 @@ export default {
       border-radius: 3px;
       padding: 0;
       margin: 0;
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
+      padding: 2px;
       &:hover {
         background: var(--accent-color);
         path {
