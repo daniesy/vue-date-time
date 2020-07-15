@@ -10,6 +10,7 @@
           :month-format="monthFormat"
           :year-format="yearFormat"
           :presets="presets"
+          :date-label="dateLabel"
         />
       </div>
       <div class="col-lg-6">
@@ -24,6 +25,7 @@
           :min-date="minDate"
           :max-date="maxDate"
           :round-up="roundUp"
+          :time-label="timeLabel"
         />
       </div>
     </div>
@@ -85,7 +87,15 @@ export default {
     roundUp: {
       type: Boolean,
       default: true
-    }
+    },
+    dateLabel: {
+      type: String,
+      default: "Date"
+    },
+    timeLabel: {
+      type: String,
+      default: "Time"
+    },
   },
   watch: {
     value(n, o) {
