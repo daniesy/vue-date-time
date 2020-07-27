@@ -239,7 +239,7 @@ export default {
     .icon {
       position: sticky;
       left: 0;
-      background: white;
+      // background: white;
       margin: 0 20px 0 0;
     }
     .minute {
