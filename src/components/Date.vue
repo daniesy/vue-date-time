@@ -158,11 +158,19 @@ export default {
       return this.current.daysInMonth();
     },
     currentMonthOffset() {
-      const offset = this.current
+      let offset = this.current
         .clone()
         .startOf("month")
         .day();
-      return this.startsOnMonday ? offset - 1 : offset;
+
+        if (this.startsOnMonday) {
+          offset -= 1;
+          if (offset < 0) {
+            offset = 6;
+          }
+        }
+
+        return offset;
     },
     currentMonthDays() {
       let date = this.current.clone().date(1);
